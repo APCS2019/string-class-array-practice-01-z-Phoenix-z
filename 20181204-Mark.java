@@ -11,14 +11,14 @@ public Hiddenword (String a){
 public String getHint (String guess){
 String a = "";
 for (int i = 0; i < guess.length();i++){
-  if (puzzle.substring(i,i+1).equalsTo(guess.substring(i,i+1))){
-  a.substring(i,i+1) = guess.substring(i,1+1);
+  if (puzzle.substring(i,i+1).equals(guess.substring(i,i+1))){
+  a = a+guess.substring(i,1+1);
   }
   else if (puzzle.indexOf(guess.substring(i,i+1)) != -1){
-  a.substring(i,i+1) = "+"
+  a = a+"+"; 
   }
   else{
-  a.substring(i,i+1) = "*"
+  a = a+"*";
   }
 }
   return a;
